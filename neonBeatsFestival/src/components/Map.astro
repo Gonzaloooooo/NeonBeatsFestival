@@ -1,0 +1,39 @@
+---
+const mapLink = 'https://maps.app.goo.gl/Gsrfjn3baBKM6cSi8';
+---
+
+<div class="how-to-get-there">
+  <h2>¿Cómo llegar?</h2>
+  <div class="map-container">
+    <iframe
+      src={mapLink}
+      width="100%"
+      height="450"
+      style="border:0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>
+
+<style>
+  .how-to-get-there {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  .how-to-get-there h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .map-container {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+</style>

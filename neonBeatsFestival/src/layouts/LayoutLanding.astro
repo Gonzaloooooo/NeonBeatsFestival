@@ -1,5 +1,7 @@
 ---
 import Cabecera from "../components/cabecera.astro"
+import Countdown from "../components/Countdown.astro"
+import Map from "../components/Map.astro"
 ---
 <!doctype html>
 <html lang="en">
@@ -12,13 +14,22 @@ import Cabecera from "../components/cabecera.astro"
 	<body>
 		<div id="landing">
 			<Cabecera/>
+			
 			<div id="mountain_background">
+				<!-- Sol -->
+				<div id="sun">
+					<Countdown/>
+				</div>
 				<!-- Mountains -->
 				<div id="mountain_1" class="mountain"/>
 				<div id="mountain_2" class="mountain"/>
 				<div id="mountain_3" class="mountain"/>
 				<div id="mountain_4" class="mountain"/>
 				
+				<!-- Road -->
+				<div id="road">
+				</div>
+
 				<!-- Palmeras -->
 				 <div id="palmeras_wrapper">
 					<!-- Palmera 1 -->
@@ -64,11 +75,12 @@ import Cabecera from "../components/cabecera.astro"
 						</g>
 					</svg>
 				</div>
-
-				<!-- Road -->
-				<div id="road">
-				</div>
+				
 			</div>
+		</div>
+		<!-- -->
+		<div id="content">
+			<Map/>
 		</div>
 	</body>
 </html>
@@ -85,13 +97,25 @@ import Cabecera from "../components/cabecera.astro"
 		height:100vh;
 		background-color: #461762;
 	}
+
+	#sun{
+		position: absolute;
+		border-radius: 100%;
+		background: linear-gradient(to bottom, rgb(154, 20, 125) 0, #461762 100%);
+		width: 45vw;
+		height: 45vw;
+		left: 27.5vw;
+		display: flex;
+		justify-content: center;
+		place-items: flex-start;
+	}
+
 	#mountain_background{
 		position: absolute;
 		top: 30%;
 		height: 70vh;
 		width: 100%;
 	}
-
 	#mountain_1{
 		background-image: url("/svg/mountain_sheet_2.svg");
 		top: 40%;
@@ -132,6 +156,7 @@ import Cabecera from "../components/cabecera.astro"
 	}
 	.palm_tree{
 		position: absolute;
+		fill: rgb(245, 106, 240);
 		height: 100%;
 		width: 50%;
 	}
@@ -145,9 +170,16 @@ import Cabecera from "../components/cabecera.astro"
 		background-image: url('../../public/png/road-removebg-preview.png');
 		background-size: cover;
 		background-position: center;
-		top: 75%;
+		top: 70%;
 		left: 20%;
 		width: 60%;
-		height: 25%;
+		height: 30%;
+	}
+
+	#content{
+		background-color: #3e3e3e;
+		width: 100%;
+		height: 100%;
+		position: absolute;
 	}
 </style>

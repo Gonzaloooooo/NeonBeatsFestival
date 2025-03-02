@@ -19,7 +19,6 @@ import FooterCopyright from "../components/FooterCopyright.astro"
 			<div id="mountain_background">
 				<!-- Sol -->
 				<div id="sun">
-					<Countdown/>
 				</div>
 				<!-- Mountains -->
 				<div id="mountain_1" class="mountain"/>
@@ -90,7 +89,11 @@ import FooterCopyright from "../components/FooterCopyright.astro"
 						</g>
 					</svg>
 				</div>
-				
+			</div>
+			<div id="entradas_wrapper">
+				<div id="landing_title">NEON BEATS FESTIVAL</div>
+				<Countdown/>
+				<div id="compra_entradas">COMPRA TUS ENTRADAS AQUÍ</div>
 			</div>
 		</div>
 		<!-- -->
@@ -111,7 +114,7 @@ import FooterCopyright from "../components/FooterCopyright.astro"
 		justify-content: center;
 		width:100%;
 		height:100vh;
-		background-color: #461762;
+		background-color: #210a2e;
 	}
 
 	#sun{
@@ -120,7 +123,7 @@ import FooterCopyright from "../components/FooterCopyright.astro"
 		background: linear-gradient(to bottom, #f8821b 0.5%, #9a147d 50%, #461762 100%);
 		width: 45vw;
 		height: 45vw;
-		left: 27.5vw;
+		left: 27vw;
 		display: flex;
 		justify-content: center;
 		place-items: flex-start;
@@ -194,9 +197,38 @@ import FooterCopyright from "../components/FooterCopyright.astro"
 	}
 
 	#content{
-		background-color: #3e3e3e;
+		background-color: #0a0a1a;
 		width: 100%;
 		height: 100%;
 		position: absolute;
+	}
+
+	#entradas_wrapper{
+		position: absolute;
+		top: 30%;
+		left: 35%;
+		width: 30%;
+		height: 40%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		place-items: center;
+	}
+	#landing_title{
+		margin-top:5% ;
+		text-align: center;
+		font-size:6cap;
+		font-weight: 700;
+		color: #c526a3;
+		text-shadow: 0 0 10px #c526a3;
+	}
+	#compra_entradas{
+		font-weight: 600;
+		color: white;
+		text-shadow: 0 0 10px white;
+		text-align: center;
+		background-color: #c7049c;
+		border: #f830cc 3px solid;
+		width: 40%;
 	}
 </style>

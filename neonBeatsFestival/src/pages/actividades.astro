@@ -1,0 +1,108 @@
+---
+import FooterCopyright from '../components/FooterCopyright.astro';
+---
+
+<section class="actividades">
+    <h2>ACTIVIDADES</h2>
+    <div class="contenedor">
+      <div class="actividad">
+        <div class="img-container">
+          <img src="https://thehotelfactory.com/wp-content/uploads/2019/11/Todo-incluido-portada.jpeg" alt="Todo Incluido">
+        </div>
+        <p>TODO INCLUIDO</p>
+      </div>
+      <div class="actividad">
+        <div class="img-container">
+          <img src="https://deusens.com/uploads/blog/2018/03/realidad-extendida-header.webp" alt="Realidad Virtual">
+        </div>
+        <p>REALIDAD VIRTUAL</p>
+      </div>
+      <div class="actividad">
+        <div class="img-container">
+          <img src="https://www.laguiago.com/wp-content/uploads/2024/07/conciertos-sevilla-julio-2024-puro-latino-fest.jpg" alt="Conciertos">
+        </div>
+        <p>CONCIERTOS</p>
+      </div>
+    </div>
+</section>
+
+<FooterCopyright />
+
+<style>
+  /* Eliminar margen y padding del body */
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Asegurar que la sección ocupa toda la pantalla */
+  .actividades {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa toda la pantalla */
+    background-color: #0a0a1a;
+    color: white;
+    padding: 40px 20px;
+  }
+
+  .actividades h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+    margin-bottom: 20px;
+  }
+
+  .contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
+  }
+
+  .actividad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+  }
+
+  .img-container {
+    width: 180px;
+    height: 180px;
+    border: 3px solid #ff00ff;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px #ff00ff;
+    overflow: hidden;
+  }
+
+  .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+  }
+
+  .actividad p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 5px #ff00ff;
+  }
+
+  /* Asegurar que el footer esté bien posicionado */
+  .footer-copyright {
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    width: 100%;
+  }
+</style>

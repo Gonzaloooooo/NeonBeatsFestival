@@ -6,12 +6,12 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
     <div class="w-full h-full color">
         <div class="text-center pt-40">
-            <h1 class="text-8xl font-medium text-white">COMPRA AQUÍ<br>TUS ENTRADAS</h1>
+            <h1 class="text-8xl font-medium titulo">COMPRA AQUÍ<br>TUS ENTRADAS</h1>
             <div class="flex space-x-72 justify-center mt-28">
                 <p class="font-medium text-white text-4xl">Entrada única</p>
                 <p class="font-medium text-white text-4xl">6000€</p>
             </div>
-            <button class="bg-purple-600 font-medium text-white text-4xl rounded-full p-4 mt-20 cursor-pointer hover:bg-purple-700 transition-transform duration-300 hover:scale-110">COMPRAR</button>
+            <button class="bg-fuchsia-500 font-medium text-white text-4xl rounded-full p-4 mt-20 cursor-pointer hover:bg-fuchsia-600 transition-transform duration-300 hover:scale-110">COMPRAR</button>
         </div>
         <img src="../../public/png/palmeraIzquierda.png" alt="Imagen fija" class="absolute bottom-0 left-14 w-96 h-auto">
         <img src="../../public/png/palmeraDerecha.png" alt="Imagen fija" class="absolute bottom-0 right-0 width h-auto">
@@ -21,10 +21,15 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
     .color{
-        background-color: #121631;
+        background-color: #0a0a1a;
     }
 
     .width{
         width:450px;
+    }
+
+    .titulo{
+        color:#ff00ff;
+        text-shadow: 0 0 10px #ff00ff;
     }
 </style>
